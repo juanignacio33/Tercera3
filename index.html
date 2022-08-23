@@ -11,16 +11,15 @@
 <body>
     <h1>libreria</h1>
     <h2>
-        estos son nuestros  mejores libros disponibles! !!
+        estos son nuestros  mejores libros disponibles !!!
     </h2>
     <li>los 11 pasos</li>
     <li> la solucion es js</li>
-    <li>padre rico</li>
-    <li>y soles lloveran</li>
-    <li>el otro camino</li>
-    <li>lluvia seca</li>
-
+    <li>padre rico padre pobre</li>
+   
+ <h3>Aqui vera nuestro stock de libros! </h3>
     <hr>
+    <button role="button" class="dos" onclick="cargarProductos()">ver productos</button>
     <table>
         <thead>
             <tr>
@@ -36,7 +35,26 @@
         </tbody>
         
     </table>
-    <button role="button" class="uno" onclick="agregarProductos()">mas libros</button>
-        <button role="button" class="dos" onclick="cargarProductos()">ver productos</button>
+    <hr>
+    <h3>Le agradeceriamos mucho si nos da una recomendacion de algun libro que para usted sea esencial!</h3>
+
+    
+    <table>
+        <thead>
+            <tr>
+                
+                <th>NombreLibro   </th>
+                <th>   AñoLibro </th>
+                
+            </tr>
+        </thead>
+        
+        <tbody id="reco">
+             
+        </tbody>
+        
+    </table>
+    <button role="button" class="uno" onclick="agregarRecomendacion()">mas libros</button>
+    <button role="button" class="tres" onclick="recoLibro()">ver </button>
 </body>
 </html>

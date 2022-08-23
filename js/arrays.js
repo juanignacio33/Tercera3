@@ -1,5 +1,12 @@
 const IVA = 1.21
 const libros = []
+const recomendaciones = []
+
+class Recomendacion {
+    constructor( nombreLibro, añoLibro) {
+        this.nombreLibro = nombreLibro
+        this.añoLibro = añoLibro
+    }}
 
 class Plantilla {
     constructor(id, nombre, importe) {
@@ -24,6 +31,11 @@ function generadorAutomatico() {
     console.table(libros)
 }
 generadorAutomatico()
+/*
+function gen() {
+    recomendaciones.push(new Recomendacion("libro", 000))
+    }
+    gen ()*/
 
 function cargarProductos() {
     
@@ -39,10 +51,23 @@ function cargarProductos() {
           })
 }
 
-function agregarProductos() {
-    let id = creoID()
-    let descripcion = prompt("Ingresa el nombre del libro:")
-    let importe = parseInt(prompt("Ingresa el precio:"))
-        libros.push(new Plantilla(id, descripcion, importe))
-        console.table(libros)
+function agregarRecomendacion() {
+    let nombreLibro = prompt("Ingresa el nombre del libro:")
+    let añoLibro = parseInt(prompt("Ingresa el año del libro:"))
+        recomendaciones.push(new Recomendacion(nombreLibro, añoLibro))
+        console.table(recomendaciones)
 }
+
+function recoLibro() {
+    const reco = document.getElementById("reco")
+         reco.innerHTML = ""
+          recomendaciones.forEach(producto => {
+            reco.innerHTML += `<tr>
+                                    
+                                    <td>${producto.nombreLibro}</td>
+                                    <td>${producto.añoLibro}</td>
+                                   
+                                </tr>`
+          })
+}
+ 
