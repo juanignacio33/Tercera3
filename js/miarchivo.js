@@ -3,10 +3,11 @@ const libros = []
 const recomendaciones = []
 
 class Recomendacion {
-    constructor( nombreLibro, añoLibro) {
+    constructor(nombreLibro, añoLibro) {
         this.nombreLibro = nombreLibro
         this.añoLibro = añoLibro
-    }}
+    }
+}
 
 class Plantilla {
     constructor(id, nombre, importe) {
@@ -22,15 +23,31 @@ function creoID() { return parseInt(Math.random() * 10000) }
 
 
 function generadorAutomatico() {
-    libros.push(new Plantilla(1234, "los 11 pasos", 29950))
-    libros.push(new Plantilla(2345, "padre rico", 249900))
-    libros.push(new Plantilla(3456, "y soles lloveran", 199949))
-    libros.push(new Plantilla(4567, "el otro camino", 219890))
-    libros.push(new Plantilla(5678, "lluvia seca", 409090))
-    libros.push(new Plantilla(6789, "la solucion es js", 459000))
+    libros.push(new Plantilla(1234, "los 11 pasos", 3000))
+    libros.push(new Plantilla(2345, "padre rico", 2000))
+    libros.push(new Plantilla(3456, "y soles lloveran", 3000))
+    libros.push(new Plantilla(4567, "el otro camino", 6000))
+    libros.push(new Plantilla(5678, "lluvia seca", 4000))
+    libros.push(new Plantilla(6789, "la solucion es js", 5000))
     console.table(libros)
 }
 generadorAutomatico()
+
+function ordenarLibros() {
+    console.clear()
+    console.table(libros)
+    libros.sort((a, b) => {
+        if (a.importe > b.importe) {
+            return 1
+        }
+        if (a.importe < b.importe) {
+            return -1
+        }
+        return 0
+    })
+    console.table(libros)
+}
+ordenarLibros()
 /*
 function gen() {
     recomendaciones.push(new Recomendacion("libro", 000))
@@ -38,36 +55,47 @@ function gen() {
     gen ()*/
 
 function cargarProductos() {
-    
+
     const tabla = document.getElementById("tabla")
-         tabla.innerHTML = ""
-          libros.forEach(producto => {
-            tabla.innerHTML += `<tr>
+    tabla.innerHTML = ""
+    libros.forEach(producto => {
+        tabla.innerHTML += `<tr>
                                     <td>${producto.id}</td>
                                     <td>${producto.nombre}</td>
                                     <td>${producto.importe}</td>
                                     <td>${producto.precioFinal()}</td>
                                 </tr>`
-          })
+    })
 }
 
 function agregarRecomendacion() {
     let nombreLibro = prompt("Ingresa el nombre del libro:")
     let añoLibro = parseInt(prompt("Ingresa el año del libro:"))
-        recomendaciones.push(new Recomendacion(nombreLibro, añoLibro))
-        console.table(recomendaciones)
+    recomendaciones.push(new Recomendacion(nombreLibro, añoLibro))
+    console.table(recomendaciones)
 }
 
 function recoLibro() {
     const reco = document.getElementById("reco")
-         reco.innerHTML = ""
-          recomendaciones.forEach(producto => {
-            reco.innerHTML += `<tr>
+    reco.innerHTML = ""
+    recomendaciones.forEach(producto => {
+        reco.innerHTML += `<tr>
                                     
                                     <td>${producto.nombreLibro}</td>
                                     <td>${producto.añoLibro}</td>
                                    
                                 </tr>`
-          })
+    })
 }
- 
+
+function existeLibro() {
+    let codigo = prompt("Ingresa el código de producto:")
+    const resultado = libros.some(Plantilla => Plantilla.id === parseInt(codigo))
+    console.log("Existe?", resultado)
+    if (resultado == true) {
+        alert("si lo tenemos en stock!!!")
+
+    } else {
+        alert("no tenemos ese libroo")
+    }
+}
