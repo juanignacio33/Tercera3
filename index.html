@@ -15,12 +15,11 @@
     <h2>
         estos son nuestros mejores libros disponibles !!!
     </h2>
-    <li>los 11 pasos</li>
+    <li>los 11 pasos de la Magia</li>
     <li> la solucion es js</li>
     <li>padre rico padre pobre</li>
     <hr>
     <h3>Aqui vera nuestro catalogo de libros! </h3>
-
     <button role="button" class="dos" onclick="cargarProductos()">Ver Libros Actuales</button>
     <table>
         <thead>
@@ -31,11 +30,8 @@
                 <th>$ FINAL $</th>
             </tr>
         </thead>
-
         <tbody id="tabla">
-
         </tbody>
-
     </table>
     <hr>
     <h3>
@@ -43,22 +39,30 @@
     </h3>
     <button role="button" class="cuatro" onclick="existeLibro()">Ver Libros Disponibles</button>
     <hr>
+    <h3>En el caso que el "N°CODIGO" si lo tengamos en stock, por favor seleccione el Eleguido </h3>
+    <article class="container">
+        <div>
+            <label for="selectLibro">Su Libro eleguidoo es:</label>
+            <select id="selectLibro" name="selectLibro">
+            </select>
+        </div>
+        <ul id="lista">
+        </ul>
+        <footer>
+            <button role="button" class="cuatro" onclick="cargoArrayVenta()">Lista de libros</button>
+        </footer>
+    </article>
+    <hr>
     <h3>Le agradeceriamos mucho si nos da una recomendacion de algun libro que para usted sea esencial!</h3>
-
     <table>
         <thead>
             <tr>
-
                 <th>NombreLibro </th>
                 <th> AñoLibro </th>
-
             </tr>
         </thead>
-
         <tbody id="reco">
-
         </tbody>
-
     </table>
     <button role="button" class="uno" onclick="agregarRecomendacion()">Recomendar!</button>
     <button role="button" class="tres" onclick="recoLibro()">Recomendados </button>
