@@ -8,6 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./estilos/estilos.css">
     <script src="./js/miarchivo.js"></script>
+    <script src="./js/prueba.js"></script>
+    <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
 <body>
@@ -64,8 +67,20 @@
         <tbody id="reco">
         </tbody>
     </table>
-    <button role="button" class="uno" onclick="agregarRecomendacion()">Recomendar!</button>
-    <button role="button" class="tres" onclick="recoLibro()">Recomendados </button>
+            <button role="button" class="uno" onclick="agregarRecomendacion()">Recomendar!</button>
+        <button role="button" class="tres" onclick="recoLibro()">Recomendados </button>
+
+        <hr>
+    <div>
+        <input type="number" id="codigo" placeholder="codigo" disabled>
+        <input type="text" id="descripcion" placeholder="Descripción del producto">
+        <input type="number" id="importe" placeholder="Importe">
+        <br><br>
+        <button class="button" id="btnNuevo">nuevo</button>
+        <button class="button button-outline" id="btnGuardar">guardar</button>
+    </div>
+
+
 </body>
 
 </html>
