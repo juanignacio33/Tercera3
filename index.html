@@ -8,9 +8,7 @@
     <title>Coder House</title>
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./estilos/estilos.css">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-
 </head>
 
 <body>
@@ -36,15 +34,17 @@
         <tbody id="tabla">
         </tbody>
     </table>
+
     <hr>
     <h3>
         para saber si hay stock del libro que gusta , por favor ingrese el "N°CODIGO" que aparece en el cuadro .
     </h3>
-    <button role="button" class="cuatro" onclick="existeLibro()">Ver Libros Disponibles</button>
+       <button role="button" class="cuatro" onclick="existeLibro()">Ver Libros Disponibles</button>
+
     <hr>
     <h3>En el caso que el "N°CODIGO" si lo tengamos en stock, por favor seleccione el Eleguido </h3>
-    <article class="container"> 
-         <footer>
+    <article class="container">
+        <footer>
             <button role="button" class="cuatro" onclick="cargoArrayVenta()">Lista de libros</button>
         </footer>
         <div>
@@ -54,7 +54,7 @@
         </div>
         <ul id="lista">
         </ul>
-      
+
     </article>
     <hr>
     <h3>Le agradeceriamos mucho si nos da una recomendacion de algun libro que para usted sea esencial!</h3>
@@ -68,45 +68,40 @@
         <tbody id="reco">
         </tbody>
     </table>
-        <button role="button" class="tres" onclick="recoLibro()">Recomendados </button>
+    <button role="button" class="tres" onclick="recoLibro()">Recomendados </button>
 
-        <hr>
-    
-        <article class="container">
-            <h2>Recomendaciones!!!</h1>
+    <hr>
+    <article class="container">
+        <h2>Recomendaciones!!!</h1>
             <div>
                 <button class="button" id="btnNuevo">inicio</button>
                 <input type="number" id="codige" placeholder="N°" disabled>
-                <input type="text" id="descripcion" placeholder="te Recomiendo este libro!">
-                <input type="number" id="importe" placeholder="es del año...">
+                <input type="text" id="descripcion" placeholder="Te Recomiendo este libro!">
+                <input type="number" id="importe" placeholder="es del año..... !">
                 <br><br>
                 <button role="button" class="uno" onclick="agregarRecomendacion()">+1!</button>
-                <button class="button button-outline" id="btnGuardar"> Guardar!  </button>
+                <button class="button button-outline" id="btnGuardar"> Guardar! </button>
             </div>
             <hr>
             <table>
                 <thead>
                     <tr>
-                      
-                        
-                        <th>DESCRIPCION</th>
-                        <th>IMPORTE</th>
-                        <th>AL CARRITO</th>
+                        <th>Recomendacion</th>
+                        <th>Año del libro.... !</th>
+                        <th>CARRITO</th>
                     </tr>
                 </thead>
                 <tbody id="cuerpo">
                     <tr>
-                        
-                        <td>DESCRIPCION DE MI PRODUCTO</td>
-                        <td>1000.00</td>
+
+                        <td>Libro Recomendado!!!</td>
+                        <td> 1994</td>
                         <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
                     </tr>
-                    <script src="./js/miarchivo.js"></script>
-                    <script src="./js/prueba.js"></script>
+                    <script src="./js/index.js"></script>
                 </tbody>
             </table>
-        </article>
-
+    </article>
 
 </body>
 
