@@ -54,6 +54,35 @@ function generadorAutomatico() {
 }
 generadorAutomatico()
 
+/////////////////////////////
+
+const ooobtenerProductos = ()=> {
+    console.log("Obteniendo productos...")
+    return new Promise((resolve, reject)=> {
+        setTimeout(() => {
+            resolve(libros) //por un valor null || valor undefined
+        }, 4500);
+    })
+}
+
+
+let troductos = []
+
+ooobtenerProductos()
+                .then((resultado)=> {
+                    return troductos = resultado
+                })
+                .then((troductos)=> {
+                    cargarProductos(troductos)
+                    console.log("Productos cargados exitosamente.")
+                })
+                .catch((error)=> {
+                 console.error("Se ha producido un error inesperado...", error)
+                })
+//////////////////////
+
+
+
 function almacenamiento() {
     localStorage.setItem("libros", JSON.stringify(libros))
 }
