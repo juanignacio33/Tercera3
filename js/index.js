@@ -56,9 +56,9 @@ generadorAutomatico()
 
 /////////////////////////////
 
-const ooobtenerProductos = ()=> {
+const ooobtenerProductos = () => {
     console.log("Obteniendo productos...")
-    return new Promise((resolve, reject)=> {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(libros) //por un valor null || valor undefined
         }, 4500);
@@ -69,16 +69,16 @@ const ooobtenerProductos = ()=> {
 let troductos = []
 
 ooobtenerProductos()
-                .then((resultado)=> {
-                    return troductos = resultado
-                })
-                .then((troductos)=> {
-                    cargarProductos(troductos)
-                    console.log("Productos cargados exitosamente.")
-                })
-                .catch((error)=> {
-                 console.error("Se ha producido un error inesperado...", error)
-                })
+    .then((resultado) => {
+        return troductos = resultado
+    })
+    .then((troductos) => {
+        cargarProductos(troductos)
+        console.log("Productos cargados exitosamente.")
+    })
+    .catch((error) => {
+        console.error("Se ha producido un error inesperado...", error)
+    })
 //////////////////////
 
 
@@ -223,4 +223,41 @@ function cargarProductas() {
                                 <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
                             </tr>`
     })
+}
+
+const seccion = document.querySelector("section#contenido")
+const loader = document.querySelector("section.loader")
+const URL = "js/libreria.json"
+let historia = []
+
+const peticionFetch = async () => {
+    const response = await fetch(URL)
+    const data = await response.json()
+    return data
+}
+
+const retornoCardContenido = (content) => {
+    const { id, poster, precio, titulo } = content
+    return `<div class="card">
+                <img class="poster" id="${id}" src="${poster}" alt="${precio}" title="${titulo}" loading="lazy" onclick="guardarContenidoEnLS('${id}')">
+            </div>`
+}
+
+const retornoCardError = () => {
+    return `<div class="error-contenido">
+                <div class="emoji-cine">🎬</div>
+                <p>Parece que hubo un error :(</p>
+                <p>Intenta nuevamente en unos segundos...</p>
+            </div>`
+}
+
+const cargarContenido = () => {
+    let contenidoHTML = ""
+    fetch(URL)
+        .then(response => response.json())
+        .then(data => historia = data)
+        .then(data => data.forEach(content => contenidoHTML += retornoCardContenido(content)))
+        .then(() => seccion.innerHTML = contenidoHTML)
+        .catch(error => seccion.innerHTML = retornoCardError())
+        .finally(() => loader.innerHTML = "")
 }

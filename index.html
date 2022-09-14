@@ -21,7 +21,7 @@
     <li>padre rico padre pobre</li>
     <hr>
     <h3>Aqui vera nuestro catalogo de libros! </h3>
-    <!--<button role="button" class="dos" onclick="cargarProductos()">Ver Libros Actuales</button> !-->
+    <button role="button" class="dos" onclick="cargarContenido()">Ver Libros Actuales</button>
     <table>
         <thead>
             <tr>
@@ -34,12 +34,20 @@
         <tbody id="tabla">
         </tbody>
     </table>
+    <hr>
+
+    <section class="loader">
+        <img src="./images/progress-icon-gif.jpg" width="100px" title="Aguarda, por favor...">
+    </section>
+    <section id="contenido">
+
+    </section>
 
     <hr>
     <h3>
         para saber si hay stock del libro que gusta , por favor ingrese el "N°CODIGO" que aparece en el cuadro .
     </h3>
-       <button role="button" class="cuatro" onclick="existeLibro()">Ver Libros Disponibles</button>
+    <button role="button" class="cuatro" onclick="existeLibro()">Ver Libros Disponibles</button>
 
     <hr>
     <h3>En el caso que el "N°CODIGO" si lo tengamos en stock, por favor seleccione el Eleguido </h3>
@@ -99,6 +107,7 @@
                         <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
                     </tr>
                     <script src="./js/index.js"></script>
+                    <script src="js/arrays.js"></script>
                 </tbody>
             </table>
     </article>

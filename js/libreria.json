@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "poster": "/posters/3.jpg",
+    "titulo": "los 11 pasos",
+    "autor": "JL",
+    "dinero": "$ 3000"
+  },
+  {
+    "id": 2,
+    "poster": "/posters/2.jpg",
+    "titulo": "padre rico padre pobre",
+    "autor": "Robert Kiyosaki",
+    "dinero": "$ 2000"
+  },
+  {
+    "id": 3,
+    "poster": "/posters/1.jpg",
+    "titulo": "y soles lloveran",
+    "autor": "JL",
+    "dinero": "$ 3000"
+  },
+  {
+    "id": 4,
+    "poster": "/posters/4.jpg",
+    "titulo": "el otro camino",
+    "autor": "JL",
+    "dinero": "$ 6000"
+  },
+  {
+    "id": 5,
+    "poster": "/posters/5.jpg",
+    "titulo": "lluvia seca",
+    "autor": "JL",
+    "dinero": "$ 4000"
+  },
+  {
+    "id": 6,
+    "poster": "/posters/.jpg",
+    "titulo": "la solucion es js",
+    "autor": "Internet",
+    "dinero": "$ 5000"
+  }
+]
