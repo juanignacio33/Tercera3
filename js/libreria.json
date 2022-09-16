@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "poster": "/posters/3.jpg",
+    "poster": "/posters/1.jpg",
     "titulo": "los 11 pasos",
     "autor": "JL",
     "dinero": "$ 3000"
@@ -15,7 +15,7 @@
   },
   {
     "id": 3,
-    "poster": "/posters/1.jpg",
+    "poster": "/posters/3.jpg",
     "titulo": "y soles lloveran",
     "autor": "JL",
     "dinero": "$ 3000"
@@ -36,7 +36,7 @@
   },
   {
     "id": 6,
-    "poster": "/posters/.jpg",
+    "poster": "/posters/6.jpg",
     "titulo": "la solucion es js",
     "autor": "Internet",
     "dinero": "$ 5000"

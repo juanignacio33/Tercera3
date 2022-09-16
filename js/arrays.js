@@ -1,7 +1,7 @@
 const historia = [
    {
       id: 1,
-      poster: "/posters/3.jpg",
+      poster: "/posters/1.jpg",
       titulo: "los 11 pasos",
       autor: "JL",
       precio: "$ 3000"
@@ -15,7 +15,7 @@ const historia = [
    },
    {
       id: 3,
-      poster: "/posters/1.jpg",
+      poster: "/posters/3.jpg",
       titulo: "y soles lloveran",
       autor: "JL",
       precio: "$ 3000"

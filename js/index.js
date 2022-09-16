@@ -54,8 +54,6 @@ function generadorAutomatico() {
 }
 generadorAutomatico()
 
-/////////////////////////////
-
 const ooobtenerProductos = () => {
     console.log("Obteniendo productos...")
     return new Promise((resolve, reject) => {
@@ -65,9 +63,7 @@ const ooobtenerProductos = () => {
     })
 }
 
-
 let troductos = []
-
 ooobtenerProductos()
     .then((resultado) => {
         return troductos = resultado
@@ -79,9 +75,6 @@ ooobtenerProductos()
     .catch((error) => {
         console.error("Se ha producido un error inesperado...", error)
     })
-//////////////////////
-
-
 
 function almacenamiento() {
     localStorage.setItem("libros", JSON.stringify(libros))
@@ -120,14 +113,14 @@ function cargarProductos() {
 const good = () => {
     Swal.fire({
         title: 'Perfecto!',
-        text: 'si tenemos Stock',
+        text: 'si tenemos El Libro!',
         icon: 'success',
         showConfirmButton: true,
         showCancelButton: true,
         confirmButtonText: "Acpetar",
-        confirmButtonText: "Cancelar",
     })
 }
+
 const no = () => {
     Swal.fire({
         title: 'Error!',
@@ -137,33 +130,11 @@ const no = () => {
     })
 }
 
-function existeLibro() {
-    let codigo = prompt("Ingresa el código de producto:")
-    const resultado = libros.some(Plantilla => Plantilla.id === parseInt(codigo))
-    console.log("Existe?", resultado)
-    if (resultado == true) {
-        good()
-    }
-    else {
-        no()
-    }
-}
-
-
 function cargoArrayVenta() {
     Ventas.sort().reverse()
     Ventas.forEach(pais => {
         selectLibro.innerHTML += `<option value="">${pais}</option>`
     })
-}
-
-function agregarRecomendacion() {
-    guardarProducto()
-    nuevoProducto()
-    recomendaciones.push(new Recomendacion("BIBLIA", 01))
-    recomendaciones.push(new Recomendacion("TORA", -504))
-    recomendaciones.push(new Recomendacion("Mahabharata ", -300))
-    console.table(recomendaciones)
 }
 
 function recoLibro() {
@@ -239,7 +210,7 @@ const peticionFetch = async () => {
 const retornoCardContenido = (content) => {
     const { id, poster, precio, titulo } = content
     return `<div class="card">
-                <img class="poster" id="${id}" src="${poster}" alt="${precio}" title="${titulo}" loading="lazy" onclick="guardarContenidoEnLS('${id}')">
+                <img class="posters" id="${id}" src="${poster}" alt="${precio}" title="${titulo}" loading="lazy" onclick="guardarContenidoEnLS('${id}')">
             </div>`
 }
 
@@ -260,4 +231,10 @@ const cargarContenido = () => {
         .then(() => seccion.innerHTML = contenidoHTML)
         .catch(error => seccion.innerHTML = retornoCardError())
         .finally(() => loader.innerHTML = "")
+    if (contenidoHTML = true) {
+        good()
+    }
+    else {
+        no()
+    }
 }

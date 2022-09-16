@@ -44,13 +44,8 @@
     </section>
 
     <hr>
-    <h3>
-        para saber si hay stock del libro que gusta , por favor ingrese el "N°CODIGO" que aparece en el cuadro .
-    </h3>
-    <button role="button" class="cuatro" onclick="existeLibro()">Ver Libros Disponibles</button>
-
     <hr>
-    <h3>En el caso que el "N°CODIGO" si lo tengamos en stock, por favor seleccione el Eleguido </h3>
+    <h3>Por favor seleccione el Eleguido </h3>
     <article class="container">
         <footer>
             <button role="button" class="cuatro" onclick="cargoArrayVenta()">Lista de libros</button>
@@ -72,45 +67,39 @@
                 <th>NombreLibro </th>
                 <th> AñoLibro </th>
             </tr>
-        </thead>
-        <tbody id="reco">
-        </tbody>
-    </table>
-    <button role="button" class="tres" onclick="recoLibro()">Recomendados </button>
-
-    <hr>
-    <article class="container">
-        <h2>Recomendaciones!!!</h1>
-            <div>
-                <button class="button" id="btnNuevo">inicio</button>
-                <input type="number" id="codige" placeholder="N°" disabled>
-                <input type="text" id="descripcion" placeholder="Te Recomiendo este libro!">
-                <input type="number" id="importe" placeholder="es del año..... !">
-                <br><br>
-                <button role="button" class="uno" onclick="agregarRecomendacion()">+1!</button>
-                <button class="button button-outline" id="btnGuardar"> Guardar! </button>
-            </div>
             <hr>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Recomendacion</th>
-                        <th>Año del libro.... !</th>
-                        <th>CARRITO</th>
-                    </tr>
-                </thead>
-                <tbody id="cuerpo">
-                    <tr>
+            <article class="container">
+                <h2>Recomendaciones!!!</h1>
+                    <div>
+                        <button class="button" id="btnNuevo">inicio</button>
+                        <input type="number" id="codige" placeholder="N°" disabled>
+                        <input type="text" id="descripcion" placeholder="Te Recomiendo este libro!">
+                        <input type="number" id="importe" placeholder="es del año..... !">
+                        <br><br>
+                        <button role="button" class="uno" onclick="agregarRecomendacion()">+1!</button>
+                        <button class="button button-outline" id="btnGuardar"> Guardar! </button>
+                    </div>
+                    <hr>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recomendacion</th>
+                                <th>Año del libro.... !</th>
+                                <th>CARRITO</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo">
+                            <tr>
 
-                        <td>Libro Recomendado!!!</td>
-                        <td> 1994</td>
-                        <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
-                    </tr>
-                    <script src="./js/index.js"></script>
-                    <script src="js/arrays.js"></script>
-                </tbody>
-            </table>
-    </article>
+                                <td>Libro Recomendado!!!</td>
+                                <td> 1994</td>
+                                <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
+                            </tr>
+                            <script src="./js/index.js"></script>
+                            <script src="js/arrays.js"></script>
+                        </tbody>
+                    </table>
+            </article>
 
 </body>
 
