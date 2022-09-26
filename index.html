@@ -6,12 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coder House</title>
+    <link rel="stylesheet" href="./pages/carrito.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./estilos/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+   
 </head>
+<header>
 
+
+</header>
 <body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito">carrito
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">  <div class="container"></div>
+    
+
+      <div class="modal-content"><div class="carrito"></div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tus Productos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"><ul><li><a class="dropdown-item" href="./pages/carrito.html">Comprar!!!</a></li></ul></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+</div>
+        </div>
+      </nav>
     <h1>libreria</h1>
     <h2>
         estos son nuestros mejores libros disponibles !!!
@@ -22,7 +57,7 @@
     <hr>
     <h3>Aqui vera nuestro catalogo de libros! </h3>
     <button role="button" class="dos" onclick="cargarContenido()">Ver Libros Actuales</button>
-    <table>
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>N°CODIGO</th>
@@ -33,7 +68,7 @@
         </thead>
         <tbody id="tabla">
         </tbody>
-    </table>
+    </table class="table table-dark table-striped">
     <hr>
 
     <section class="loader">
@@ -48,7 +83,8 @@
     <h3>Por favor seleccione el Eleguido </h3>
     <article class="container">
         <footer>
-            <button role="button" class="cuatro" onclick="cargoArrayVenta()">Lista de libros</button>
+            <button role="button" class="cuatro" onclick="cargoArrayVenta()"  >Lista de libros</button>
+            
         </footer>
         <div>
             <label for="selectLibro">Su Libro eleguidoo es:</label>
@@ -95,12 +131,26 @@
                                 <td> 1994</td>
                                 <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
                             </tr>
-                            <script src="./js/index.js"></script>
-                            <script src="js/arrays.js"></script>
+                        
                         </tbody>
                     </table>
             </article>
 
+            <h1>mi tienda</h1>
+
+           <!-- <div class="container"></div> 
+            <div class="carrito"></div>!-->
+
+
+
+
+            
+
+
+            <script src="./js/index.js"></script>
+            <script src="./js/arrays.js"></script>
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 
 </html>

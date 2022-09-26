@@ -4,6 +4,7 @@ const Ventas = ['los 11 pasos', 'padre rico', 'y soles lloveran', 'el otro camin
 const IVA = 1.21
 const rees = []
 
+
 class Recomendacion {
     constructor(nombreLibro, añoLibro) {
         this.nombreLibro = nombreLibro
@@ -198,21 +199,36 @@ function cargarProductas() {
 
 const seccion = document.querySelector("section#contenido")
 const loader = document.querySelector("section.loader")
-const URL = "js/libreria.json"
+const URL = "https://demo9739051.mockable.io/users"
 let historia = []
 
 const peticionFetch = async () => {
     const response = await fetch(URL)
     const data = await response.json()
     return data
+    
 }
 
 const retornoCardContenido = (content) => {
     const { id, poster, precio, titulo } = content
     return `<div class="card">
-                <img class="posters" id="${id}" src="${poster}" alt="${precio}" title="${titulo}" loading="lazy" onclick="guardarContenidoEnLS('${id}')">
-            </div>`
+              
+                <div class="card" style="width: 18rem;">
+  <img src="${poster}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${titulo}</h5>
+    <p class="card-text">${precio}</p>
+   
+    <button class= "btnCarrit" onclick="agregarfuncionalida()">preparar compra</button>
+    <button class= "btnCarrito" id="btn-agregar${id}">Al Carrito</button>
+  </div>
+</div>
+                
+                
+                `
+                
 }
+
 
 const retornoCardError = () => {
     return `<div class="error-contenido">
@@ -237,4 +253,216 @@ const cargarContenido = () => {
     else {
         no()
     }
+  
 }
+
+
+
+
+
+const containerDiv =document.querySelector(".container") 
+const carritoDiv =document.querySelector(".carrito") 
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
+/*
+function crearCards() {
+ka.forEach((prod) => {
+    containerDiv.innerHTML += `<div>
+                                 <h4>${prod.titulo}</h4>
+                                 <p>$${prod.precio}</p>
+                                 <button class= "btnCarrito" id="btn-agregar${prod.id}">button</button>
+                                 </div>
+                              `;
+      
+});
+  agregarfuncionalida()
+}*/
+
+function agregarfuncionalida (){
+    historia.forEach(prod => {
+       document
+       .querySelector(`#btn-agregar${prod.id}`)
+       .addEventListener("click", ()=> {
+       
+        agregarAlCarrito(prod);
+       });
+    });
+}
+
+
+function  agregarAlCarrito (prod){
+    let existe = carrito.some((historiaSome) => historiaSome.id === prod.id);
+    if (existe === false) {
+        prod.cantidad = 1;
+        carrito.push(prod) ;
+    } else{
+        let prodFind = carrito.find ((historiaFind) => historiaFind.id === prod.id);
+        prodFind.cantidad++ ;
+    }
+     console.log(carrito)
+     renderizarCarrito()
+    
+}
+
+function renderizarCarrito() {
+    carritoDiv.innerHTML = "";
+    carrito.forEach((prod) => {
+        carritoDiv.innerHTML += `<div>
+                                 <h4>${prod.titulo}</h4>
+                                 <p>CANTIDAD: ${prod.cantidad }</p>
+                                 <button class= "btnCarrito" id="btn-borrar${prod.id}">borrar</button>
+                                 </div>
+                              `;
+                                 
+    })
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+    borrarProducto()
+}
+
+function borrarProducto(){
+    carrito.forEach((prod) => {
+        document
+        .querySelector(`#btn-borrar${prod.id}`)
+        .addEventListener("click", ()=> {
+            carrito = carrito.filter(
+                (historiaFilter) => historiaFilter.id !== prod.id
+            );
+          renderizarCarrito() ;
+        });
+     });
+ }
+
+
+crearCards() ; 
+renderizarCarrito()
+
+
+
+/*
+
+
+const ka = [
+    {
+       id: 1,
+       poster: "/posters/1.jpg",
+       titulo: "los 11 pasos",
+       autor: "JL",
+       precio: "$ 3000"
+    },
+    {
+       id: 2,
+       poster: "/posters/2.jpg",
+       titulo: "padre rico padre pobre",
+       autor: "Robert Kiyosaki",
+       precio: "$ 2000"
+    },
+    {
+       id: 3,
+       poster: "/posters/3.jpg",
+       titulo: "y soles lloveran",
+       autor: "JL",
+       precio: "$ 3000"
+    },
+    {
+       id: 4,
+       poster: "/posters/4.jpg",
+       titulo: "el otro camino",
+       autor: "JL",
+       precio: "$ 6000"
+    },
+    {
+       id: 5, poster: "/posters/5.jpg",
+       titulo: "lluvia seca",
+       autor: "JL",
+       precio: "$ 4000"
+    },
+    {
+       id: 6,
+       poster: "/posters/6.jpg",
+       titulo: "la solucion es js",
+       autor: "Internet",
+       precio: "$ 5000"
+    },
+ 
+ ]
+
+
+
+const containerDiv =document.querySelector(".container") 
+const carritoDiv =document.querySelector(".carrito") 
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
+
+function crearCards() {
+ka.forEach((prod) => {
+    containerDiv.innerHTML += `<div>
+                                 <h4>${prod.titulo}</h4>
+                                 <p>$${prod.precio}</p>
+                                 <button class= "btnCarrito" id="btn-agregar${prod.id}">button</button>
+                                 </div>
+                              `;
+      
+});
+  agregarfuncionalida()
+}
+
+function agregarfuncionalida (){
+    ka.forEach(prod => {
+       document
+       .querySelector(`#btn-agregar${prod.id}`)
+       .addEventListener("click", ()=> {
+       
+        agregarAlCarrito(prod);
+       });
+    });
+}
+
+function  agregarAlCarrito (prod){
+    let existe = carrito.some((kaSome) => kaSome.id === prod.id);
+    if (existe === false) {
+        prod.cantidad = 1;
+        carrito.push(prod) ;
+    } else{
+        let prodFind = carrito.find ((kaFind) => kaFind.id === prod.id);
+        prodFind.cantidad++ ;
+    }
+     console.log(carrito)
+     renderizarCarrito()
+    
+}
+
+function renderizarCarrito() {
+    carritoDiv.innerHTML = "";
+    carrito.forEach((prod) => {
+        carritoDiv.innerHTML += `<div>
+                                 <h4>${prod.titulo}</h4>
+                                 <p>CANTIDAD: ${prod.cantidad }</p>
+                                 <button class= "btnCarrito" id="btn-borrar${prod.id}">borrar</button>
+                                 </div>
+                              `;
+                                 
+    })
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+    borrarProducto()
+}
+
+function borrarProducto(){
+    carrito.forEach((prod) => {
+        document
+        .querySelector(`#btn-borrar${prod.id}`)
+        .addEventListener("click", ()=> {
+            carrito = carrito.filter(
+                (kaFilter) => kaFilter.id !== prod.id
+            );
+          renderizarCarrito() ;
+        });
+     });
+ }
+
+
+crearCards() ; 
+renderizarCarrito()
+
+*/

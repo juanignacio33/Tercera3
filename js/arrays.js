@@ -1,4 +1,4 @@
-const historia = [
+const historiaa = [
    {
       id: 1,
       poster: "/posters/1.jpg",
