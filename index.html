@@ -7,47 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coder House</title>
     <link rel="stylesheet" href="./pages/carrito.html">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./estilos/estilos.css">
-   
+
 </head>
 <header>
 
 
 </header>
+
 <body>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito">carrito
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">  <div class="container"></div>
-    
 
-      <div class="modal-content"><div class="carrito"></div>
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tus Productos en el carrito</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         Gracias por su compra! se le enviara a domicilio sin cargo .
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"><ul><li><a class="dropdown-item" href="./pages/carrito.html">Comprar!!!</a></li></ul></button>
-        </div>
-      </div>
+    <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito">carrito
+        </button>
     </div>
-  </div>
-
-    
-</div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="container"></div>
+            <div class="modal-content">
+                <div class="carrito"></div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tus Productos en el carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Gracias por su compra! se le enviara a domicilio sin cargo .
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">
+                        <ul>
+                            <li><a class="dropdown-item" href="./pages/carrito.html">Comprar!!!</a></li>
+                        </ul>
+                    </button>
+                </div>
+            </div>
         </div>
-      </nav>
-    <h1>libreria</h1>
+    </div>
+
+    </div>
+    </div>
+    </nav>
+    <h1>                                    libreria</h1>
     <h2>
         estos son nuestros mejores libros disponibles !!!
     </h2>
@@ -83,8 +88,8 @@
     <h3>Por favor seleccione el Eleguido </h3>
     <article class="container">
         <footer>
-            <button role="button" class="cuatro" onclick="cargoArrayVenta()"  >Lista de libros</button>
-            
+            <button role="button" class="cuatro" onclick="cargoArrayVenta()">Lista de libros</button>
+
         </footer>
         <div>
             <label for="selectLibro">Su Libro eleguidoo es:</label>
@@ -131,17 +136,19 @@
                                 <td> 1994</td>
                                 <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
                             </tr>
-                        
+
                         </tbody>
                     </table>
             </article>
 
-           
+
 
             <script src="./js/index.js"></script>
             <script src="./js/arrays.js"></script>
-            
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
