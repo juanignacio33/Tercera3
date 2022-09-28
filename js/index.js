@@ -4,7 +4,6 @@ const Ventas = ['los 11 pasos', 'padre rico', 'y soles lloveran', 'el otro camin
 const IVA = 1.21
 const rees = []
 
-
 class Recomendacion {
     constructor(nombreLibro, añoLibro) {
         this.nombreLibro = nombreLibro
@@ -59,7 +58,7 @@ const ooobtenerProductos = () => {
     console.log("Obteniendo productos...")
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(libros) 
+            resolve(libros)
         }, 4500);
     })
 }
@@ -192,7 +191,7 @@ function cargarProductas() {
                                 <td>${Ree.id}</td>
                                 <td>${Ree.descripcion}</td>
                                 <td>${Ree.importa}</td>
-                                <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
+                                
                             </tr>`
     })
 }
@@ -266,7 +265,6 @@ function agregarfuncionalida() {
     });
 }
 
-
 function agregarAlCarrito(prod) {
     let existe = carrito.some((historiaSome) => historiaSome.id === prod.id);
     if (existe === false) {
@@ -308,15 +306,6 @@ function borrarProducto() {
             });
     });
 }
- function gut() {
-    if (contenidoHTML = true) {
-        good()
-    }
-    else {
-        no()
-    }
-
- }
 
 crearCards();
 renderizarCarrito()

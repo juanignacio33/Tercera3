@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +7,11 @@
     <title>Coder House</title>
     <link rel="stylesheet" href="./pages/carrito.html">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./estilos/estilos.css">
-
 </head>
 <header>
-
 
 </header>
 
@@ -52,16 +49,23 @@
     </div>
     </div>
     </nav>
+
     <h1>libreria</h1>
     <h2>
         estos son nuestros mejores libros disponibles !!!
     </h2>
-    <li>los 11 pasos de la Magia</li>
-    <li> la solucion es js</li>
-    <li>padre rico padre pobre</li>
+    <ul class="list-group">
+        <li class="list-group-item active" aria-current="true"> Nuestros mejores libros!📘​</li>
+        <li class="list-group-item">los 11 pasos de la Magia</li>
+        <li class="list-group-item">la solucion es js</li>
+        <li class="list-group-item">padre rico padre pobre</li>
+    </ul>
     <hr>
+
     <h3>Aqui vera nuestro catalogo de libros! </h3>
-    <button role="button" class="dos" onclick="cargarContenido()">Ver Libros Actuales</button>
+    <div class="formulario">
+        <button type="button" class="btn btn-success" onclick="cargarContenido()">Ver Libros Actuales</button>
+    </div>
     <table class="table table-dark table-striped">
         <thead>
             <tr>
@@ -80,16 +84,13 @@
         <img src="./images/progress-icon-gif.jpg" width="100px" title="Aguarda, por favor...">
     </section>
     <section id="contenido">
-
     </section>
+    <hr>
 
-    <hr>
-    <hr>
     <h3>Por favor seleccione el Eleguido </h3>
     <article class="container">
         <footer>
             <button role="button" class="cuatro" onclick="cargoArrayVenta()">Lista de libros</button>
-
         </footer>
         <div>
             <label for="selectLibro">Su Libro eleguidoo es:</label>
@@ -98,9 +99,9 @@
         </div>
         <ul id="lista">
         </ul>
-
     </article>
     <hr>
+
     <h3>Le agradeceriamos mucho si nos da una recomendacion de algun libro que para usted sea esencial!</h3>
     <table>
         <thead>
@@ -109,6 +110,7 @@
                 <th> AñoLibro </th>
             </tr>
             <hr>
+
             <article class="container">
                 <h2>Recomendaciones!!!</h1>
                     <div>
@@ -121,34 +123,31 @@
                         <button class="button button-outline" id="btnGuardar"> Guardar! </button>
                     </div>
                     <hr>
-                    <table>
+
+                    <table class="table table-dark table-striped">
                         <thead>
                             <tr>
+                                <th>N° de recomendados</th>
                                 <th>Recomendacion</th>
                                 <th>Año del libro.... !</th>
-                                <th>CARRITO</th>
                             </tr>
                         </thead>
                         <tbody id="cuerpo">
                             <tr>
-
+                                <td>333</td>
                                 <td>Libro Recomendado!!!</td>
                                 <td> 1994</td>
-                                <td><img src="images/cart-24.png" alt="Carrito" title="Agregar al carrito"></td>
                             </tr>
 
                         </tbody>
                     </table>
             </article>
 
-
-
             <script src="./js/index.js"></script>
             <script src="./js/arrays.js"></script>
-
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-                crossorigin="anonymous"></script>
+                    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                    crossorigin="anonymous"></script>
 </body>
 
 </html>

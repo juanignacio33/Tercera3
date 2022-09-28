@@ -7,3 +7,10 @@ body {
     background-color: rgb(208, 227, 227);
 
 }
+.post {
+    display: flex;
+}
+.formulario {
+    display: grid;
+    justify-items: center;
+}
