@@ -307,5 +307,5 @@ function borrarProducto() {
     });
 }
 
-crearCards();
+crearCards()
 renderizarCarrito()
