@@ -199,7 +199,7 @@ function cargarProductas() {
 
 const seccion = document.querySelector("section#contenido")
 const loader = document.querySelector("section.loader")
-const URL = "https://demo9739051.mockable.io/users  "
+const URL = "https://demo9739051.mockable.io/users"
 let historia = []
 
 const peticionFetch = async () => {
@@ -308,7 +308,15 @@ function borrarProducto() {
             });
     });
 }
+ function gut() {
+    if (contenidoHTML = true) {
+        good()
+    }
+    else {
+        no()
+    }
 
+ }
 
 crearCards();
 renderizarCarrito()
