@@ -194,6 +194,22 @@ function cargarProductas() {
                                 
                             </tr>`
     })
+     if (cargarProductas = true) {
+        goood()
+    }
+    else {
+        no()
+    }
+}
+const goood = () => {
+    Swal.fire({
+        title: 'Perfecto!',
+        text: 'Gracias por su recomendacion!!!✅​',
+        icon: 'success',
+        showConfirmButton: true,
+      
+        confirmButtonText: "Guardar",
+    })
 }
 
 const seccion = document.querySelector("section#contenido")
