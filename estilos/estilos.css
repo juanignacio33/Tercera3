@@ -3,14 +3,20 @@
 
 }
 body {
-
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(208, 227, 227);
 
 }
 .post {
-    display: flex;
+    display: grid;
 }
 .formulario {
     display: grid;
     justify-items: center;
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 300;
 }

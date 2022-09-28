@@ -113,7 +113,7 @@ function cargarProductos() {
 const good = () => {
     Swal.fire({
         title: 'Perfecto!',
-        text: 'si tenemos El Libro!',
+        text: 'Elija su Libro Deseado!✅​',
         icon: 'success',
         showConfirmButton: true,
         showCancelButton: true,
